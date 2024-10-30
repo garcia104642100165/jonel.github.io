@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        /* Layout Wrapper */
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Ensures columns stack on small screens */
+        }
+
+        /* Column Styles */
+        .column {
+            flex: 1; /* Equal width for all columns */
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+            margin: 10px;
+            min-width: 200px; /* Prevent columns from becoming too small */
+        }
+
+        /* Responsive Breakpoint */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stacks columns vertically on smaller screens */
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Three Column Layout Example
+    </header>
+
+    <div class="container">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>This is the first column. You can add any content here, such as text, images, or links.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>This is the second column. Use this area to display additional information.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>This is the third column. Feel free to customize it further.</p>
+        </div>
+    </div>
+
+    <footer>
+        Copyright © 2024 - Three Column Layout Demo
+    </footer>
+
+</body>
+</html>
